@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f7f9">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Дневник · Колледж</title>
+
+<!-- 🔽 ПОДКЛЮЧЕНИЕ ВНЕШНЕГО CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+  <header class="topbar">
+    <div class="topbar-text">
+      <p class="topbar-eyebrow" id="barEyebrow">IT College</p>
+      <h1 class="topbar-title" id="barTitle">Расписание</h1>
+    </div>
+    <button class="avatar" id="avatarBtn" aria-label="Профиль">АС</button>
+  </header>
+
+  <main class="content">
+
+    <!-- ================== РАСПИСАНИЕ ================== -->
+    <section class="tab active" id="tab-schedule">
+
+      <div class="card">
+        <div class="week-head">
+          <div class="week-head-l">
+            <div class="week-title" id="weekTitle">Неделя 3 · сентябрь</div>
+            <div class="week-sub" id="weekSub">4 пары сегодня</div>
+          </div>
+          <div class="week-nav">
+            <button id="weekPrev" aria-label="Предыдущая неделя">‹</button>
+            <button id="weekNext" aria-label="Следующая неделя">›</button>
+          </div>
+        </div>
+        <div class="week-grid">
+          <button class="wd"><span>Пн</span><b>13</b></button>
+          <button class="wd active"><span>Вт</span><b>14</b></button>
+          <button class="wd"><span>Ср</span><b>15</b></button>
+          <button class="wd"><span>Чт</span><b>16</b></button>
+          <button class="wd"><span>Пт</span><b>17</b></button>
+          <button class="wd"><span>Сб</span><b>18</b></button>
+          <button class="wd"><span>Вс</span><b>19</b></button>
+        </div>
+      </div>
+
+      <div class="section-label">
+        Сегодня <small>Вторник · 14 сентября</small>
+      </div>
+
+      <div class="lessons">
+        <article class="lesson">
+          <div class="l-time"><b>09:00</b><span>10:30</span></div>
+          <div class="l-body">
+            <div class="l-subject">Программирование</div>
+            <div class="l-meta">каб. 214 · Иванов И. И.</div>
+          </div>
+          <span class="l-status live">Идёт</span>
+        </article>
+
+        <article class="lesson">
+          <div class="l-time"><b>10:45</b><span>12:15</span></div>
+          <div class="l-body">
+            <div class="l-subject">Базы данных</div>
+            <div class="l-meta">каб. 210 · Петрова А. С.</div>
+          </div>
+          <span class="l-status">Далее</span>
+        </article>
+
+        <article class="lesson">
+          <div class="l-time"><b>12:45</b><span>14:15</span></div>
+          <div class="l-body">
+            <div class="l-subject">Веб-разработка</div>
+            <div class="l-meta">каб. 301 · Смирнов Д. В.</div>
+          </div>
+          <span class="l-status">Практ.</span>
+        </article>
+
+
+      </div>
+
+    </section>
+
+    <!-- ================== ОЦЕНКИ ================== -->
+    <section class="tab" id="tab-grades">
+
+      <div class="sem-bar">
+        <div class="sem-cell clickable">
+          <div class="sem-val">4.6</div>
+          <div class="sem-lbl">Средний</div>
+        </div>
+        <div class="sem-cell clickable">
+          <div class="sem-val accent">4.7</div>
+          <div class="sem-lbl">Прогноз</div>
+        </div>
+        <div class="sem-cell clickable">
+          <div class="sem-val">18</div>
+          <div class="sem-lbl">Оценок</div>
+        </div>
+      </div>
+
+      <div class="section-label">
+        Предметы <small>1 семестр · 5 предметов</small>
+      </div>
+
+      <div class="subject-list">
+
+        <div class="subject">
+          <div>
+            <div class="s-head">
+              <span class="s-dot" style="background:#1d4ed8"></span>
+              <span class="s-name">Программирование</span>
+            </div>
+            <div class="s-grades">
+              <span class="g g5">5</span><span class="g g5">5</span>
+              <span class="g g4">4</span><span class="g g5">5</span>
+            </div>
+          </div>
+          <div class="s-avg">4.8<small>прогноз 5</small></div>
+          <div class="s-detail">
+            <div class="s-detail-row"><span>Посещаемость</span><b>100%</b></div>
+            <div class="s-detail-row"><span>Практических сдано</span><b>4 / 4</b></div>
+            <div class="s-detail-row"><span>Последняя работа</span><b>5 · 12.09</b></div>
+          </div>
+        </div>
+
+        <div class="subject">
+          <div>
+            <div class="s-head">
+              <span class="s-dot" style="background:#047857"></span>
+              <span class="s-name">Базы данных</span>
+            </div>
+            <div class="s-grades">
+              <span class="g g5">5</span><span class="g g4">4</span>
+              <span class="g g4">4</span><span class="g g5">5</span>
+            </div>
+          </div>
+          <div class="s-avg">4.5<small>прогноз 5</small></div>
+          <div class="s-detail">
+            <div class="s-detail-row"><span>Посещаемость</span><b>96%</b></div>
+            <div class="s-detail-row"><span>Лабораторных</span><b>3 / 4</b></div>
+            <div class="s-detail-row"><span>Последняя работа</span><b>4 · 11.09</b></div>
+          </div>
+        </div>
+
+        <div class="subject">
+          <div>
+            <div class="s-head">
+              <span class="s-dot" style="background:#b45309"></span>
+              <span class="s-name">Веб-разработка</span>
+            </div>
+            <div class="s-grades">
+              <span class="g g5">5</span><span class="g g5">5</span><span class="g g5">5</span>
+            </div>
+          </div>
+          <div class="s-avg">5.0<small>прогноз 5</small></div>
+          <div class="s-detail">
+            <div class="s-detail-row"><span>Посещаемость</span><b>100%</b></div>
+            <div class="s-detail-row"><span>Проектов сдано</span><b>3 / 3</b></div>
+            <div class="s-detail-row"><span>Последняя работа</span><b>5 · 13.09</b></div>
+          </div>
+        </div>
+
+        <div class="subject">
+          <div>
+            <div class="s-head">
+              <span class="s-dot" style="background:#7c3aed"></span>
+              <span class="s-name">Математика</span>
+            </div>
+            <div class="s-grades">
+              <span class="g g4">4</span><span class="g g3">3</span>
+              <span class="g g5">5</span><span class="g g4">4</span>
+            </div>
+          </div>
+          <div class="s-avg">4.0<small>прогноз 4</small></div>
+          <div class="s-detail">
+            <div class="s-detail-row"><span>Посещаемость</span><b>88%</b></div>
+            <div class="s-detail-row"><span>Контрольных</span><b>4 / 5</b></div>
+            <div class="s-detail-row"><span>Последняя работа</span><b>4 · 10.09</b></div>
+          </div>
+        </div>
+
+        <div class="subject">
+          <div>
+            <div class="s-head">
+              <span class="s-dot" style="background:#0e7490"></span>
+              <span class="s-name">Английский язык</span>
+            </div>
+            <div class="s-grades">
+              <span class="g g5">5</span><span class="g g5">5</span>
+              <span class="g g4">4</span><span class="g g5">5</span>
+            </div>
+          </div>
+          <div class="s-avg">4.7<small>прогноз 5</small></div>
+          <div class="s-detail">
+            <div class="s-detail-row"><span>Посещаемость</span><b>100%</b></div>
+            <div class="s-detail-row"><span>Устных ответов</span><b>6</b></div>
+            <div class="s-detail-row"><span>Последняя работа</span><b>5 · 13.09</b></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================== ДОМАШКА ================== -->
+    <section class="tab" id="tab-homework">
+
+      <div class="filters">
+        <button class="fbtn active">Все</button>
+        <button class="fbtn">Активные</button>
+        <button class="fbtn">Просрочено</button>
+        <button class="fbtn">Выполнено</button>
+      </div>
+
+      <div class="section-label">
+        Активные <small>3 задания</small>
+      </div>
+
+      <div class="task-list">
+
+        <div class="task">
+          <button class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>
+          <div class="t-main">
+            <div class="t-subject">Программирование</div>
+            <div class="t-title">Лабораторная №4 — принципы ООП</div>
+          </div>
+          <span class="t-due soon">15.09</span>
+        </div>
+
+        <div class="task">
+          <button class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>
+          <div class="t-main">
+            <div class="t-subject">Математика</div>
+            <div class="t-title">Задачи 12–24, стр. 45</div>
+          </div>
+          <span class="t-due">16.09</span>
+        </div>
+
+        <div class="task">
+          <button class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>
+          <div class="t-main">
+            <div class="t-subject">Базы данных</div>
+            <div class="t-title">ER-диаграмма для курсового проекта</div>
+          </div>
+          <span class="t-due late">13.09</span>
+        </div>
+
+      </div>
+
+      <div class="section-label">
+        Выполнено <small>1 задание</small>
+      </div>
+
+      <div class="task-list">
+
+        <div class="task done">
+          <button class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>
+          <div class="t-main">
+            <div class="t-subject">Английский язык</div>
+            <div class="t-title">Эссе «My future profession»</div>
+          </div>
+          <span class="t-due ok">Готово</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================== ПРОФИЛЬ ================== -->
+    <section class="tab" id="tab-profile">
+      <div class="profile-head">
+      <div class="profile">
+    <img src="imge/artem.jpeg" alt="Артём Соколов" class="profile-photo">
+
+    <div>
+        <h2>Артём Соколов</h2>
+        <p>Группа ПКС-3 · 2 курс</p>
+        <p>Информационные системы и программирование</p>
+    </div>
+    </div>
+      </div>
+          <div class="student-info">
+             <h3>Информация о студенте </h3>
+             <div class="info-row">
+                <span>№ студента </span>
+                <strong>ИС-21001</strong>
+             </div>
+              <div class="info-row">
+                <span>Имя: </span>
+                <strong>Артём</strong>
+             </div>
+              <div class="info-row">
+                <span>Фамиля:</span>
+                <strong>Солоков</strong>
+             </div>
+              <div class="info-row">
+                <span>Отчества:c</span>
+                <strong>Александрович</strong>
+             </div>
+          </div>
+      <div class="section-label">Показатели</div>
+      <div class="sem-bar">
+        <div class="sem-cell clickable">
+          <div class="sem-val">4.6</div>
+          <div class="sem-lbl">Средний</div>
+        </div>
+        <div class="sem-cell clickable">
+          <div class="sem-val">94%</div>
+          <div class="sem-lbl">Посещ.</div>
+        </div>
+        <div class="sem-cell clickable">
+          <div class="sem-val">12</div>
+          <div class="sem-lbl">Заданий</div>
+        </div>
+      </div>
+
+      <div class="section-label">Настройки</div>
+      <div class="menu">
+        <button class="menu-item" data-menu="notify">
+          <span class="m-ico">◉</span>Уведомления<span class="m-arrow">›</span>
+        </button>
+        <button class="menu-item" data-menu="group">
+          <span class="m-ico">◈</span>Моя группа<span class="m-arrow">›</span>
+        </button>
+        <button class="menu-item" data-menu="year">
+          <span class="m-ico">▤</span>Успеваемость за год<span class="m-arrow">›</span>
+        </button>
+        </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================== НИЖНЯЯ НАВИГАЦИЯ ================== -->
+  <nav class="nav">
+    <button class="nav-item active" data-tab="schedule" data-title="Расписание">
+      <span class="n-icon-wrap"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg></span>
+      Расписание
+    </button>
+
+    <button class="nav-item" data-tab="grades" data-title="Оценки">
+      <span class="n-icon-wrap"><svg viewBox="0 0 24 24"><path d="M4 19V5a1 1 0 0 1 1-1h11l4 4v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z"/><path d="M8 13h8M8 16.5h5"/></svg></span>
+      Оценки
+    </button>
+
+    <button class="nav-item" data-tab="homework" data-title="Домашние задания">
+      <span class="n-icon-wrap"><svg viewBox="0 0 24 24"><path d="M9 4.5h6a1 1 0 0 1 1 1V6h1.5a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1H8V5.5a1 1 0 0 1 1-1Z"/><path d="M9.5 12.5l2 2 3.5-3.5"/></svg></span>
+      ДЗ
+      <span class="nav-badge">3</span>
+    </button>
+
+    <button class="nav-item" data-tab="profile" data-title="Профиль">
+      <span class="n-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.7 4-5.5 7.5-5.5s6.3 1.8 7.5 5.5"/></svg></span>
+      Профиль
+    </button>
+  </nav>
+
+    <div class="overlay" id="overlay" data-close onclick="document.querySelectorAll('.sheet').forEach(function(s){s.classList.remove('show')});this.classList.remove('show');document.body.style.overflow='';"></div>
+  <div class="sheet" id="sheet-lesson" role="dialog" aria-modal="true" aria-label="Детали пары">
+    <div class="sheet-head"><div><div class="sheet-title" id="lessonDetailTitle">Детали пары</div><div class="sheet-sub">Нажмите «Напомнить», чтобы не забыть</div></div><button class="sheet-close" type="button" aria-label="Закрыть" data-close onclick="this.closest('.sheet').classList.remove('show');var o=document.getElementById('overlay');if(o)o.classList.remove('show');document.body.style.overflow='';">×</button></div>
+    <div class="sheet-body" id="lessonDetailBody"></div>
+  </div>
+  <div class="sheet" id="sheet-notify" role="dialog" aria-modal="true" aria-label="Уведомления">
+    <div class="sheet-head"><div><div class="sheet-title">Уведомления</div><div class="sheet-sub">Управляй пушами и почтой</div></div><button class="sheet-close" type="button" aria-label="Закрыть" data-close onclick="this.closest('.sheet').classList.remove('show');var o=document.getElementById('overlay');if(o)o.classList.remove('show');document.body.style.overflow='';">×</button></div>
+    <div class="sheet-body">
+      <div class="row"><div class="row-l"><div class="row-title">Push-уведомления</div><div class="row-sub">Пары, оценки и дедлайны</div></div><button class="toggle on" data-store="notify_push"></button></div>
+      <div class="row"><div class="row-l"><div class="row-title">Оценки</div><div class="row-sub">Сразу как ставит преподаватель</div></div><button class="toggle on" data-store="notify_grades"></button></div>
+      <div class="row"><div class="row-l"><div class="row-title">Домашние задания</div><div class="row-sub">За день до срока</div></div><button class="toggle on" data-store="notify_hw"></button></div>
+      <div class="row"><div class="row-l"><div class="row-title">Расписание</div><div class="row-sub">Изменения и отмены пар</div></div><button class="toggle" data-store="notify_schedule"></button></div>
+      <div class="row"><div class="row-l"><div class="row-title">Звук</div><div class="row-sub">Короткий сигнал при новых событиях</div></div><button class="toggle" data-store="notify_sound"></button></div>
+    </div>
+  </div>
+  <div class="sheet" id="sheet-group" role="dialog" aria-modal="true" aria-label="Моя группа">
+    <div class="sheet-head"><div><div class="sheet-title">ПКС-3 - 3 курс</div><div class="sheet-sub">Информационные системы и программирование · 24 чел.</div></div><button class="sheet-close" type="button" aria-label="Закрыть" data-close onclick="this.closest('.sheet').classList.remove('show');var o=document.getElementById('overlay');if(o)o.classList.remove('show');document.body.style.overflow='';">×</button></div>
+    <div class="sheet-body">
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;"><span class="chip">Куратор: Иванова М.С.</span><span class="chip">Староста: Соколов А.</span></div>
+      <div class="person"><div class="p-ava-sm">АС</div><div class="row-l"><div class="row-title">Артём Соколов <span style="color:var(--accent); font-size:11px; background:var(--accent-soft); padding:2px 6px; border-radius:6px; margin-left:6px;">ты</span></div><div class="row-sub">ср. балл 4.6 · 94% посещаемость</div></div><span style="color:var(--ok); font-weight:700;">?</span></div>
+      <div class="person"><div class="p-ava-sm">ЕК</div><div class="row-l"><div class="row-title">Елена Кузнецова</div><div class="row-sub">ср. балл 4.9 · староста</div></div><span style="color:var(--ok);">?</span></div>
+      <div class="person"><div class="p-ava-sm">ДМ</div><div class="row-l"><div class="row-title">Даниил Морозов</div><div class="row-sub">ср. балл 4.3</div></div><span style="color:var(--muted-2);">0</span></div>
+      <div class="person"><div class="p-ava-sm">АК</div><div class="row-l"><div class="row-title">Анна Ковалёва</div><div class="row-sub">ср. балл 4.7</div></div><span style="color:var(--ok);">?</span></div>
+      <div class="person"><div class="p-ava-sm">ИП</div><div class="row-l"><div class="row-title">Илья Петров</div><div class="row-sub">ср. балл 3.9</div></div><span style="color:var(--warn);">?</span></div>
+      <div style="margin-top:14px; display:flex; gap:8px;"><button class="chip" onclick="showToast(`Чат группы скоро`)">Чат группы</button><button class="chip" onclick="showToast(`Расписание группы скопировано`)">Поделиться</button></div>
+    </div>
+  </div>
+  <div class="sheet" id="sheet-year" role="dialog" aria-modal="true" aria-label="Успеваемость">
+    <div class="sheet-head"><div><div class="sheet-title">Успеваемость за год</div><div class="sheet-sub">Динамика по месяцам · 1 семестр</div></div><button class="sheet-close" type="button" aria-label="Закрыть" data-close onclick="this.closest('.sheet').classList.remove('show');var o=document.getElementById('overlay');if(o)o.classList.remove('show');document.body.style.overflow='';">×</button></div>
+    <div class="sheet-body">
+      <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:16px;"><div style="font-size:28px; font-weight:800; letter-spacing:-.8px;">4.6</div><div style="font-size:12.5px; color:var(--ok); background:var(--ok-bg); padding:3px 8px; border-radius:8px; font-weight:700;">+0.3</div><div style="margin-left:auto; font-size:12px; color:var(--muted); font-weight:600;">сентябрь — январь</div></div>
+      <div style="display:grid; gap:10px;">
+        <div class="row" style="padding:8px 0;"><div class="row-l"><div class="row-title" style="font-size:12px;">Сентябрь</div></div><div class="grade-bar"><i data-w="72%"></i></div><b>4.4</b></div>
+        <div class="row" style="padding:8px 0;"><div class="row-l"><div class="row-title" style="font-size:12px;">Октябрь</div></div><div class="grade-bar"><i data-w="78%"></i></div><b>4.6</b></div>
+        <div class="row" style="padding:8px 0;"><div class="row-l"><div class="row-title" style="font-size:12px;">Ноябрь</div></div><div class="grade-bar"><i data-w="84%"></i></div><b>4.7</b></div>
+        <div class="row" style="padding:8px 0;"><div class="row-l"><div class="row-title" style="font-size:12px;">Декабрь</div></div><div class="grade-bar"><i data-w="68%" style="background:var(--warn);"></i></div><b>4.2</b></div>
+        <div class="row" style="padding:8px 0;"><div class="row-l"><div class="row-title" style="font-size:12px;">Январь</div></div><div class="grade-bar"><i data-w="90%"></i></div><b>4.8</b></div>
+      </div>
+      <div style="margin-top:16px; padding:12px 14px; background:var(--surface-2); border:1px solid var(--line); border-radius:10px; font-size:12.5px; color:var(--muted); line-height:1.5;"><b style="color:var(--text);">Совет:</b> подтяни «Английский» — средний 4.0 тянет балл вниз.</div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+
+</div>
+
+<script>
+// Глобальное закрытие — работает всегда, даже если основной скрипт упадёт
+window.closeAllSheets=function(){
+  document.querySelectorAll('.sheet').forEach(function(s){s.classList.remove('show')});
+  var o=document.getElementById('overlay'); if(o)o.classList.remove('show');
+  document.body.style.overflow='';
+};
+window.openSheet=function(id){
+  var sheet=document.getElementById(id); if(!sheet)return;
+  window.closeAllSheets();
+  sheet.classList.add('show');
+  var o=document.getElementById('overlay'); if(o)o.classList.add('show');
+  document.body.style.overflow='hidden';
+};
+// Ранний делегированный клик: один X сверху + оверлей + Esc
+document.addEventListener('click',function(e){
+  var t=e.target&&e.target.closest?e.target.closest('[data-close]'):null;
+  if(t){window.closeAllSheets();return;}
+  if(e.target&&(e.target.id==='overlay'||(e.target.classList&&e.target.classList.contains('overlay')))){window.closeAllSheets();}
+},true);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')window.closeAllSheets();});
+</script>
+<script>
+window.onerror=function(m,s,l,c,e){console.log('JS error',m); return true;};
+try{
+  // === Toast — улучшен ===
+  const toastEl = document.getElementById("toast");
+  let toastTimer=null;
+  function showToast(msg, duration=1900){
+    if(!toastEl) return;
+    if(navigator.vibrate) navigator.vibrate(10);
+    toastEl.textContent=msg;
+    toastEl.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer=setTimeout(()=> toastEl.classList.remove("show"), duration);
+  }
+  // === Вкладки — сохранение и клавиатура ===
+  const navItems=document.querySelectorAll(".nav-item");
+  const tabs=document.querySelectorAll(".tab");
+  const barTitle=document.getElementById("barTitle");
+  const barEyebrow=document.getElementById("barEyebrow");
+  function goToTab(name, opts={}){
+    closeAllSheets();
+    const btn=document.querySelector(".nav-item[data-tab=\""+name+"\"]");
+    if(!btn) return;
+    navItems.forEach(b=> b.classList.toggle("active", b===btn));
+    tabs.forEach(t=> t.classList.toggle("active", t.id==="tab-"+name));
+    barTitle.textContent=btn.dataset.title;
+    if(name==="schedule") barEyebrow.textContent="Колледж \u00B7 Группа ИС-21";
+    else if(name==="grades") barEyebrow.textContent="1 семестр \u00B7 2026";
+    else if(name==="homework"){ const c=document.querySelectorAll(".task:not(.done)").length; barEyebrow.textContent=c+" активных заданий"; }
+    else barEyebrow.textContent="Личный кабинет";
+    try{ localStorage.setItem("diary_tab", name);}catch(e){}
+    if(!opts.noScroll) window.scrollTo({top:0, behavior:"smooth"});
+  }
+  navItems.forEach(btn=> btn.addEventListener("click", ()=> goToTab(btn.dataset.tab)));
+  document.addEventListener("keydown", e=>{
+    if(e.key>="1" && e.key<="4" && !e.metaKey && !e.ctrlKey && document.activeElement.tagName!=="INPUT"){
+      const map=["schedule","grades","homework","profile"]; goToTab(map[+e.key-1]);
+    }
+    if(e.key==="Escape") closeAllSheets();
+  });
+  try{ const s=localStorage.getItem("diary_tab"); if(s) goToTab(s,{noScroll:true}); }catch(e){}
+  const avatarBtn=document.getElementById("avatarBtn");
+  if(avatarBtn) avatarBtn.addEventListener("click", ()=>{
+    const isProfile=document.getElementById("tab-profile").classList.contains("active");
+    if(isProfile) showToast("Вы уже в профиле"); else goToTab("profile");
+  });
+  // === Неделя — реальная логика ===
+  const weekTitle=document.getElementById("weekTitle");
+  const weekSub=document.getElementById("weekSub");
+  const weekPrev=document.getElementById("weekPrev");
+  const weekNext=document.getElementById("weekNext");
+  const wdButtons=Array.from(document.querySelectorAll(".wd"));
+  const lessonsWrap=document.querySelector(".lessons");
+  const sectionLabelSmall=document.querySelector("#tab-schedule .section-label small");
+  const scheduleByDay={
+    "13":[{time:"09:00",end:"10:30",subj:"Математика",meta:"каб. 305 \u00B7 Петрова А.В.",status:"done",statusText:"прошло"},{time:"10:45",end:"12:15",subj:"История",meta:"каб. 112 \u00B7 Сидоров К.М.",status:"",statusText:"лекция"},{time:"13:00",end:"14:30",subj:"Физкультура",meta:"спортзал \u00B7 Орлов Д.С.",status:"",statusText:"практика"}],
+    "14":[{time:"09:00",end:"10:30",subj:"Программирование",meta:"каб. 214 \u00B7 Иванов И.И.",status:"live",statusText:"идёт"},{time:"10:45",end:"12:15",subj:"Базы данных",meta:"каб. 210 \u00B7 Кузнецов П.С.",status:"",statusText:"лекция"},{time:"12:45",end:"14:15",subj:"Веб-разработка",meta:"каб. 301 \u00B7 Морозов А.В.",status:"",statusText:"практика"}],
+    "15":[{time:"09:00",end:"10:30",subj:"Английский язык",meta:"каб. 204 \u00B7 Смирнова Е.Ю.",status:"",statusText:"практика"}],
+    "16":[{time:"10:15",end:"11:45",subj:"Компьютерные сети",meta:"каб. 210 \u00B7 Лебедев Р.К.",status:"",statusText:"лекция"},{time:"12:00",end:"13:30",subj:"Программирование",meta:"каб. 214 \u00B7 Иванов И.И.",status:"",statusText:"практика"},{time:"13:45",end:"15:15",subj:"Базы данных",meta:"каб. 210 \u00B7 Кузнецов П.С.",status:"",statusText:"лаб"}],
+    "17":[{time:"09:00",end:"10:30",subj:"Веб-разработка",meta:"каб. 301 \u00B7 Морозов А.В.",status:"",statusText:"практика"},{time:"12:45",end:"14:15",subj:"Математика",meta:"каб. 305 \u00B7 Петрова А.В.",status:"",statusText:"практика"}],
+    "18":[{time:"10:00",end:"11:30",subj:"Физкультура",meta:"спортзал \u00B7 Орлов Д.С.",status:"",statusText:"зачёт"}],
+    "19":[]
+  };
+  const dayNames=["Пн","Вт","Ср","Чт","Пт","Сб","Вс"];
+  const monthNames=["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
+  let currentWeek=3;
+  let weekStartDate=new Date(2026,8,13);
+  let selectedDayNum="14";
+  function formatWeekTitle(){ const m=monthNames[weekStartDate.getMonth()]; weekTitle.textContent="Неделя "+currentWeek+" \u00B7 "+m; }
+  function renderWeekGrid(){
+    wdButtons.forEach((btn,i)=>{
+      const d=new Date(weekStartDate); d.setDate(weekStartDate.getDate()+i);
+      btn.querySelector("b").textContent=d.getDate();
+      btn.querySelector("span").textContent=dayNames[i];
+      const ns=String(d.getDate());
+      const has=(scheduleByDay[ns] && scheduleByDay[ns].length>0);
+      btn.classList.toggle("has-dot", has);
+      btn.classList.toggle("active", ns===selectedDayNum);
+    });
+  }
+  function renderLessonsForDay(dayNum){
+    selectedDayNum=dayNum;
+    const list=scheduleByDay[dayNum]||[];
+    const d=new Date(weekStartDate);
+    const idx=wdButtons.findIndex(b=> b.querySelector("b").textContent===dayNum);
+    const daySpan= idx>=0 ? dayNames[idx] : "";
+    const dateObj=new Date(weekStartDate); dateObj.setDate(weekStartDate.getDate()+(idx>=0?idx:0));
+    const labelText= list.length===0 ? "Нет пар" : list.length+" "+(list.length===1?"пара":list.length<5?"пары":"пар")+" сегодня";
+    if(weekSub) weekSub.textContent=labelText;
+    if(sectionLabelSmall){
+      if(list.length===0) sectionLabelSmall.textContent=daySpan+" \u00B7 "+dateObj.getDate()+" "+monthNames[dateObj.getMonth()];
+      else sectionLabelSmall.textContent=daySpan+" \u00B7 "+dateObj.getDate()+" "+monthNames[dateObj.getMonth()];
+    }
+    if(!lessonsWrap) return;
+    lessonsWrap.style.opacity="0"; lessonsWrap.style.transform="translateY(6px)"; lessonsWrap.style.transition="opacity .18s ease, transform .18s ease";
+    setTimeout(()=>{
+      if(list.length===0){
+        lessonsWrap.innerHTML="<div class=\"empty\"><b>Пар нет</b><div style=\"margin-top:6px\">Отдохни — заданий на завтра нет</div><button onclick=\"goToTab(`homework`)\">Перейти к ДЗ</button></div>";
+      } else {
+        lessonsWrap.innerHTML=list.map(item=>{
+          let cls=""; if(item.status==="live") cls="live"; else if(item.status==="done") cls="done";
+          return "<article class=\"lesson\" data-subj=\""+item.subj+"\" data-meta=\""+item.meta+"\" data-time=\""+item.time+"\u2013"+item.end+"\"><div class=\"l-time\"><b>"+item.time+"</b><span>"+item.end+"</span></div><div class=\"l-body\"><div class=\"l-subject\">"+item.subj+"</div><div class=\"l-meta\">"+item.meta+"</div></div><span class=\"l-status "+cls+"\">"+item.statusText+"</span></article>";
+        }).join("");
+        lessonsWrap.querySelectorAll(".lesson").forEach(el=> el.addEventListener("click", ()=> openLessonDetail(el)));
+      }
+      lessonsWrap.style.opacity="1"; lessonsWrap.style.transform="translateY(0)";
+    },160);
+    wdButtons.forEach(b=> b.classList.toggle("active", b.querySelector("b").textContent===dayNum));
+    try{ localStorage.setItem("diary_day", dayNum);}catch(e){}
+  }
+  function updateWeek(delta){
+    currentWeek+=delta; if(currentWeek<1) currentWeek=1; if(currentWeek>52) currentWeek=52;
+    weekStartDate.setDate(weekStartDate.getDate()+delta*7);
+    formatWeekTitle(); renderWeekGrid();
+    const firstDayNum=wdButtons[0].querySelector("b").textContent;
+    renderLessonsForDay(firstDayNum);
+    const card=weekTitle.closest(".card"); if(card){ card.style.transition="opacity .18s ease"; card.style.opacity="0.55"; setTimeout(()=> card.style.opacity="1",180); }
+    showToast(delta>0 ? "Следующая неделя" : "Предыдущая неделя");
+    try{ localStorage.setItem("diary_week", currentWeek); localStorage.setItem("diary_weekStart", weekStartDate.toISOString());}catch(e){}
+  }
+  if(weekPrev) weekPrev.addEventListener("click", ()=> updateWeek(-1));
+  if(weekNext) weekNext.addEventListener("click", ()=> updateWeek(1));
+  wdButtons.forEach(d=> d.addEventListener("click", ()=>{
+    const num=d.querySelector("b").textContent; renderLessonsForDay(num); if(navigator.vibrate) navigator.vibrate(10);
+  }));
+  try{ const sd=localStorage.getItem("diary_day"); if(sd && scheduleByDay[sd]!==undefined) selectedDayNum=sd; const sw=localStorage.getItem("diary_week"); const ss=localStorage.getItem("diary_weekStart"); if(sw) currentWeek=parseInt(sw,10); if(ss) weekStartDate=new Date(ss);}catch(e){}
+  formatWeekTitle(); renderWeekGrid(); renderLessonsForDay(selectedDayNum);
+  // Деталь пары
+  const overlay=document.getElementById("overlay");
+  function openSheet(id){
+    const sheet=document.getElementById(id); if(!sheet){ return; }
+    document.querySelectorAll(".sheet").forEach(s=> s.classList.remove("show"));
+    sheet.classList.add("show");
+    if(overlay) overlay.classList.add("show"); document.body.style.overflow="hidden";
+  }
+  function closeAllSheets(){ document.querySelectorAll(".sheet").forEach(s=> s.classList.remove("show")); if(overlay) overlay.classList.remove("show"); document.body.style.overflow=""; }
+  window.closeAllSheets=closeAllSheets;
+  window.openSheet=openSheet;
+  window.showToast=showToast;
+  if(overlay) overlay.addEventListener("click", closeAllSheets);
+  function openLessonDetail(el){
+    const subj=el.dataset.subj || el.querySelector(".l-subject").textContent;
+    const meta=el.dataset.meta || el.querySelector(".l-meta").textContent;
+    const time=el.dataset.time || el.querySelector(".l-time b").textContent;
+    const status=el.querySelector(".l-status").textContent;
+    const dt=document.getElementById("lessonDetailTitle");
+    const db=document.getElementById("lessonDetailBody");
+    if(dt) dt.textContent=subj;
+    if(db){
+      const parts=meta.split(" \u00B7 "); const cab=parts[0]||meta; const teacher=parts[1]||"\u2014";
+      db.innerHTML="<div class=\"l-detail-grid\"><div class=\"l-detail-card\"><b>Время</b><span>"+time+"</span></div><div class=\"l-detail-card\"><b>Кабинет</b><span>"+cab+"</span></div><div class=\"l-detail-card\"><b>Преподаватель</b><span>"+teacher+"</span></div><div class=\"l-detail-card\"><b>Статус</b><span><span class=\"s-status "+(status==="идёт"?"live":"")+"\">"+status+"</span></span></div><div style=\"display:flex; gap:8px; margin-top:4px;\"><button class=\"chip\" onclick=\"showToast(`ДЗ скопировано`); closeAllSheets();\">Скопировать ДЗ</button><button class=\"chip\" onclick=\"showToast(`Напоминание поставлено`); closeAllSheets();\">Напомнить</button></div></div>";
+    }
+    openSheet("sheet-lesson");
+  }
+  window.openLessonDetail=openLessonDetail;
+  document.querySelectorAll(".lesson").forEach(el=> el.addEventListener("click", ()=> openLessonDetail(el)));
+  // Предметы — один открыт
+  document.querySelectorAll(".subject").forEach(s=>{
+    s.setAttribute("role","button"); s.setAttribute("tabindex","0");
+    s.addEventListener("click", ()=>{
+      const was=s.classList.contains("open");
+      document.querySelectorAll(".subject").forEach(x=> x.classList.remove("open"));
+      if(!was) s.classList.add("open");
+    });
+    s.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); s.click(); }});
+  });
+  // Фильтры ДЗ
+  const filterBtns=Array.from(document.querySelectorAll(".fbtn"));
+  const allTasks=Array.from(document.querySelectorAll(".task-list .task"));
+  const hwBadge=document.querySelector(".nav-badge");
+  function updateFilterCounts(){
+    const total=allTasks.length;
+    const active=allTasks.filter(t=> !t.classList.contains("done") && !t.querySelector(".t-due")?.classList.contains("late")).length;
+    const overdue=allTasks.filter(t=> t.querySelector(".t-due")?.classList.contains("late") && !t.classList.contains("done")).length;
+    const done=allTasks.filter(t=> t.classList.contains("done")).length;
+    const counts=[total,active,overdue,done];
+    filterBtns.forEach((btn,i)=>{
+      let cnt=btn.querySelector(".f-count"); if(!cnt){ cnt=document.createElement("span"); cnt.className="f-count"; btn.appendChild(cnt); }
+      cnt.textContent=counts[i];
+    });
+    const badgeCount=active+overdue;
+    if(hwBadge){ hwBadge.textContent=badgeCount; hwBadge.style.display=badgeCount>0?"grid":"none"; }
+    const activeLabel=document.querySelector("#tab-homework .section-label:nth-of-type(1) small");
+    const doneLabel=document.querySelector("#tab-homework .section-label:nth-of-type(2) small");
+    if(activeLabel) activeLabel.textContent=(active+overdue)+" заданий";
+    if(doneLabel) doneLabel.textContent=done+" заданий";
+    if(document.getElementById("tab-homework").classList.contains("active")) barEyebrow.textContent=(active+overdue)+" активных заданий";
+  }
+  function applyFilter(filter){
+    const norm=(filter||"").toString().trim().toLowerCase();
+    let mode="all";
+    if(norm.includes("актуал") || norm.includes("актив") || norm.includes("сегодня")) mode="active";
+    else if(norm.includes("просроч")) mode="overdue";
+    else if(norm.includes("выполнен")) mode="done";
+    allTasks.forEach(t=>{
+      const dueEl=t.querySelector(".t-due"); const isDone=t.classList.contains("done"); const isLate=dueEl && dueEl.classList.contains("late");
+      let show=true;
+      if(mode==="active") show=!isDone && !isLate;
+      else if(mode==="overdue") show=!isDone && isLate;
+      else if(mode==="done") show=isDone;
+      else show=true;
+      t.style.display=show? "":"none";
+      if(show) t.style.animation="tabIn .22s cubic-bezier(.22,1,.36,1)";
+    });
+    const anyVisible=allTasks.some(t=> t.style.display!=="none");
+    let globalEmpty=document.getElementById("hw-empty");
+    if(!anyVisible){
+      if(!globalEmpty){ globalEmpty=document.createElement("div"); globalEmpty.id="hw-empty"; globalEmpty.className="empty"; document.querySelector("#tab-homework .task-list:last-of-type").after(globalEmpty); }
+      globalEmpty.innerHTML="<b>Ничего не найдено</b><div style=\"margin-top:4px\">Попробуй другой фильтр</div><button onclick=\"filterBtns[0].click()\">Показать все</button>";
+      globalEmpty.style.display="";
+    } else if(globalEmpty) globalEmpty.style.display="none";
+    const lists=document.querySelectorAll("#tab-homework .task-list");
+    lists.forEach(list=>{
+      const visible=Array.from(list.children).some(c=> c.style.display!=="none");
+      const label=list.previousElementSibling;
+      if(label && label.classList.contains("section-label")) label.style.display=visible? "":"none";
+    });
+  }
+  filterBtns.forEach(f=>{
+    f.addEventListener("click", ()=>{
+      filterBtns.forEach(x=> x.classList.remove("active")); f.classList.add("active");
+      let raw=(f.textContent||"").replace(/\d/g,"").trim();
+      applyFilter(raw);
+    });
+  });
+  updateFilterCounts();
+  // Чек-боксы ДЗ — сохранение
+  const STORAGE_KEY="diary_tasks_done";
+  let doneIds=new Set();
+  try{ const s=JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]"); s.forEach(id=> doneIds.add(id)); }catch(e){}
+  allTasks.forEach((t,i)=>{ if(!t.dataset.id) t.dataset.id="task-"+i; if(doneIds.has(t.dataset.id)){ t.classList.add("done"); const due=t.querySelector(".t-due"); if(due){ due.className="t-due ok"; due.textContent="выполнено"; } } });
+  updateFilterCounts();
+  document.querySelectorAll(".task .check").forEach(c=>{
+    c.addEventListener("click", e=>{
+      e.stopPropagation();
+      const t=c.closest(".task"); const id=t.dataset.id; const due=t.querySelector(".t-due");
+      t.classList.toggle("done");
+      if(t.classList.contains("done")){
+        doneIds.add(id); if(due){ due.dataset.prevClass=due.className; due.dataset.prevText=due.textContent; due.className="t-due ok"; due.textContent="выполнено"; }
+        t.style.animation="doneFlash .4s ease"; showToast("Задание выполнено");
+      } else {
+        doneIds.delete(id); if(due && due.dataset.prevClass){ due.className=due.dataset.prevClass; due.textContent=due.dataset.prevText||"\u2014"; } else if(due){ due.className="t-due"; due.textContent="\u2014"; }
+        showToast("Отмечено как невыполненное");
+      }
+      try{ localStorage.setItem(STORAGE_KEY, JSON.stringify([...doneIds])); }catch(e){}
+      updateFilterCounts();
+      const activeBtn=document.querySelector(".fbtn.active");
+      if(activeBtn) applyFilter((activeBtn.textContent||"").replace(/\d/g,"").trim());
+    });
+  });
+  document.querySelectorAll(".task").forEach(t=>{
+    t.addEventListener("click", e=>{ if(e.target.closest(".check")) return; const ch=t.querySelector(".check"); if(ch) ch.click(); });
+  });
+  // Меню профиля — листы
+  const menuSheets={ notify:"sheet-notify", group:"sheet-group", year:"sheet-year", settings:"sheet-notify" };
+  document.querySelectorAll(".menu-item[data-menu]").forEach(item=>{
+    const old=item.cloneNode(true); item.parentNode.replaceChild(old, item);
+  });
+  document.querySelectorAll(".menu-item[data-menu]").forEach(item=>{
+    item.addEventListener("click", ()=>{
+      const key=item.dataset.menu; const sid=menuSheets[key];
+      if(sid) openSheet(sid);
+    });
+  });
+  // Переключатели
+  document.querySelectorAll(".toggle[data-store]").forEach(tog=>{
+    const key=tog.dataset.store;
+    try{ const v=localStorage.getItem(key); if(v==="1") tog.classList.add("on"); if(v==="0") tog.classList.remove("on"); }catch(e){}
+    tog.addEventListener("click", ()=>{
+      tog.classList.toggle("on"); try{ localStorage.setItem(key, tog.classList.contains("on")?"1":"0"); }catch(e){}
+      showToast(tog.classList.contains("on")? "Включено":"Выключено"); if(navigator.vibrate) navigator.vibrate(10);
+    });
+  });
+  // Показатели — кликабельны
+  document.querySelectorAll(".sem-cell.clickable").forEach(cell=>{
+    cell.addEventListener("click", ()=>{
+      const lbl=cell.querySelector(".sem-lbl").textContent; const val=cell.querySelector(".sem-val").textContent;
+      showToast(lbl+": "+val);
+    });
+  });
+  document.querySelectorAll(".sheet-close, [data-close]").forEach(b=> b.addEventListener("click", closeAllSheets));
+  document.addEventListener('click', e=>{
+    const t=e.target.closest ? e.target.closest('.sheet-close, [data-close]') : null;
+    const isOverlay = e.target.id==='overlay' || (e.target.classList && e.target.classList.contains('overlay'));
+    if(t || isOverlay){
+      closeAllSheets();
+    }
+  });
+  const yearSheet=document.getElementById("sheet-year");
+  if(yearSheet){
+    const obs=new MutationObserver(()=>{
+      if(yearSheet.classList.contains("show")){
+        yearSheet.querySelectorAll(".grade-bar i").forEach(bar=>{
+          const w=bar.dataset.w||"70%"; bar.style.width="0"; setTimeout(()=>{ bar.style.transition="width .6s cubic-bezier(.22,1,.36,1)"; },50); setTimeout(()=> bar.style.width=w,100);
+        });
+      }
+    });
+    obs.observe(yearSheet,{attributes:true, attributeFilter:["class"]});
+  }
+  window.clearDiaryData=function(){
+    if(confirm("Очистить прогресс заданий и настройки?")){
+      try{ localStorage.removeItem(STORAGE_KEY);}catch(e){}
+      doneIds.clear();
+      allTasks.forEach(t=>{ t.classList.remove("done"); const due=t.querySelector(".t-due"); if(due && due.dataset.prevText){ due.textContent=due.dataset.prevText; due.className=due.dataset.prevClass||"t-due"; }});
+      filterBtns.forEach((b,i)=> b.classList.toggle("active", i===0));
+      applyFilter("Все");
+      updateFilterCounts(); showToast("Данные очищены"); closeAllSheets();
+    }
+  };
+  window.exportDiary=function(){
+    const data={tasks:[...doneIds], tab:localStorage.getItem("diary_tab"), week:localStorage.getItem("diary_week")};
+    const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+    const url=URL.createObjectURL(blob); const a=document.createElement("a"); a.href=url; a.download="diary-export.json"; a.click(); URL.revokeObjectURL(url); showToast("Экспорт сохранён");
+  };
+
+}catch(e){console.error('wrapped',e);}
+</script>
+
+</body>
+</html>
