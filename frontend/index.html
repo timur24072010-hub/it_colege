@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f7f9">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Дневник · Колледж</title>
+
+<!-- 🔽 ПОДКЛЮЧЕНИЕ ВНЕШНЕГО CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+  <header class="topbar">
+    <div class="topbar-text">
+      <p class="topbar-eyebrow" id="barEyebrow">IT College</p>
+      <h1 class="topbar-title" id="barTitle">Расписание</h1>
+    </div>
+    <button class="avatar" id="avatarBtn" aria-label="Профиль">АС</button>
+  </header>
+
+  <main class="content">
+
+    <!-- ================== РАСПИСАНИЕ ================== -->
+    <section class="tab active" id="tab-schedule">
+
+      <div class="card">
+        <div class="week-head">
+          <div class="week-head-l">
+            <div class="week-title" id="weekTitle">Неделя 3 · сентябрь</div>
+            <div class="week-sub" id="weekSub">4 пары сегодня</div>
+          </div>
+          <div class="week-nav">
+            <button id="weekPrev" aria-label="Предыдущая неделя">‹</button>
+            <button id="weekNext" aria-label="Следующая неделя">›</button>
+          </div>
+        </div>
+        <div class="week-grid">
+          <button class="wd"><span>Пн</span><b>13</b></button>
+          <button class="wd active"><span>Вт</span><b>14</b></button>
+          <button class="wd"><span>Ср</span><b>15</b></button>
+          <button class="wd"><span>Чт</span><b>16</b></button>
+          <button class="wd"><span>Пт</span><b>17</b></button>
+          <button class="wd"><span>Сб</span><b>18</b></button>
+          <button class="wd"><span>Вс</span><b>19</b></button>
+        </div>
+      </div>
+
+      <div class="section-label">
+        Сегодня <small>Вторник · 14 сентября</small>
+      </div>
+
+      <div class="lessons">
+        <article class="lesson">
+          <div class="l-time"><b>09:00</b><span>10:30</span></div>
+          <div class="l-body">
+            <div class="l-subject">Программирование</div>
+            <div class="l-meta">каб. 214 · Иванов И. И.</div>
+          </div>
+          <span class="l-status live">Идёт</span>
+        </article>
+
+        <article class="lesson">
+          <div class="l-time"><b>10:45</b><span>12:15</span></div>
+          <div class="l-body">
+            <div class="l-subject">Базы данных</div>
+            <div class="l-meta">каб. 210 · Петрова А. С.</div>
+          </div>
+          <span class="l-status">Далее</span>
+        </article>
+
+        <article class="lesson">
+          <div class="l-time"><b>12:45</b><span>14:15</span></div>
+          <div class="l-body">
+            <div class="l-subject">Веб-разработка</div>
+            <div class="l-meta">каб. 301 · Смирнов Д. В.</div>
+          </div>
+          <span class="l-status">Практ.</span>
+        </article>
+
+
+      </div>
+
+    </section>
+
+    <!-- ================== ОЦЕНКИ ================== -->
+    <section class="tab" id="tab-grades">
+
+      <div class="sem-bar">
+        <div class="sem-cell clickable">
+          <div class="sem-val">4.6</div>
+          <div class="sem-lbl">Средний</div>
+        </div>
+        <div class="sem-cell clickable">
+          <div class="sem-val accent">4.7</div>
+          <div class="sem-lbl">Прогноз</div>
+        </div>
+        <div class="sem-cell clickable">
+          <div class="sem-val">18</div>
+          <div class="sem-lbl">Оценок</div>
+        </div>
+      </div>
+
+      <div class="section-label">
+        Предметы <small>1 семестр · 5 предметов</small>
+      </div>
+
+      <div class="subject-list">
+
+        <div class="subject">
+          <div>
+            <div class="s-head">
+              <span class="s-dot" style="background:#1d4ed8"></span>
+              <span class="s-name">Программирование</span>
+            </div>
+            <div class="s-grades">
+              <span class="g g5">5</span><span class="g g5">5</span>
+              <span class="g g4">4</span><span class="g g5">5</span>
+            </div>
+          </div>
+          <div class="s-avg">4.8<small>прогноз 5</small></div>
+          <div class="s-detail">
+            <div class="s-detail-row"><span>Посещаемость</span><b>100%</b></div>
+            <div class="s-detail-row"><span>Практических сдано</span><b>4 / 4</b></div>
+            <div class="s-detail-row"><span>Последняя работа</span><b>5 · 12.09</b></div>
+          </div>
+        </div>
+
+        <div class="subject">
+          <div>
+            <div class="s-head">
+              <span class="s-dot" style="background:#047857"></span>
+              <span class="s-name">Базы данных</span>
+            </div>
+            <div class="s-grades">
+              <span class="g g5">5</span><span class="g g4">4</span>
+              <span class="g g4">4</span><span class="g g5">5</span>
+            </div>
+          </div>
+          <div class="s-avg">4.5<small>прогноз 5</small></div>
+          <div class="s-detail">
+            <div class="s-detail-row"><span>Посещаемость</span><b>96%</b></div>
+            <div class="s-detail-row"><span>Лабораторных</span><b>3 / 4</b></div>
+            <div class="s-detail-row"><span>Последняя работа</span><b>4 · 11.09</b></div>
+          </div>
+        </div>
+
+        <div class="subject">
+          <div>
+            <div class="s-head">
+              <span class="s-dot" style="background:#b45309"></span>
+              <span class="s-name">Веб-разработка</span>
+            </div>
+            <div class="s-grades">
+              <span class="g g5">5</span><span class="g g5">5</span><span class="g g5">5</span>
+            </div>
+          </div>
+          <div class="s-avg">5.0<small>прогноз 5</small></div>
+          <div class="s-detail">
+            <div class="s-detail-row"><span>Посещаемость</span><b>100%</b></div>
+            <div class="s-detail-row"><span>Проектов сдано</span><b>3 / 3</b></div>
+            <div class="s-detail-row"><span>Последняя работа</span><b>5 · 13.09</b></div>
+          </div>
+        </div>
+
+        <div class="subject">
+          <div>
+            <div class="s-head">
+              <span class="s-dot" style="background:#7c3aed"></span>
+              <span class="s-name">Математика</span>
+            </div>
+            <div class="s-grades">
+              <span class="g g4">4</span><span class="g g3">3</span>
+              <span class="g g5">5</span><span class="g g4">4</span>
+            </div>
+          </div>
+          <div class="s-avg">4.0<small>прогноз 4</small></div>
+          <div class="s-detail">
+            <div class="s-detail-row"><span>Посещаемость</span><b>88%</b></div>
+            <div class="s-detail-row"><span>Контрольных</span><b>4 / 5</b></div>
+            <div class="s-detail-row"><span>Последняя работа</span><b>4 · 10.09</b></div>
+          </div>
+        </div>
+
+        <div class="subject">
+          <div>
+            <div class="s-head">
+              <span class="s-dot" style="background:#0e7490"></span>
+              <span class="s-name">Английский язык</span>
+            </div>
+            <div class="s-grades">
+              <span class="g g5">5</span><span class="g g5">5</span>
+              <span class="g g4">4</span><span class="g g5">5</span>
+            </div>
+          </div>
+          <div class="s-avg">4.7<small>прогноз 5</small></div>
+          <div class="s-detail">
+            <div class="s-detail-row"><span>Посещаемость</span><b>100%</b></div>
+            <div class="s-detail-row"><span>Устных ответов</span><b>6</b></div>
+            <div class="s-detail-row"><span>Последняя работа</span><b>5 · 13.09</b></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================== ДОМАШКА ================== -->
+    <section class="tab" id="tab-homework">
+
+      <div class="filters">
+        <button class="fbtn active">Все</button>
+        <button class="fbtn">Активные</button>
+        <button class="fbtn">Просрочено</button>
+        <button class="fbtn">Выполнено</button>
+      </div>
+
+      <div class="section-label">
+        Активные <small>3 задания</small>
+      </div>
+
+      <div class="task-list">
+
+        <div class="task">
+          <button class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>
+          <div class="t-main">
+            <div class="t-subject">Программирование</div>
+            <div class="t-title">Лабораторная №4 — принципы ООП</div>
+          </div>
+          <span class="t-due soon">15.09</span>
+        </div>
+
+        <div class="task">
+          <button class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>
+          <div class="t-main">
+            <div class="t-subject">Математика</div>
+            <div class="t-title">Задачи 12–24, стр. 45</div>
+          </div>
+          <span class="t-due">16.09</span>
+        </div>
+
+        <div class="task">
+          <button class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>
+          <div class="t-main">
+            <div class="t-subject">Базы данных</div>
+            <div class="t-title">ER-диаграмма для курсового проекта</div>
+          </div>
+          <span class="t-due late">13.09</span>
+        </div>
+
+      </div>
+
+      <div class="section-label">
+        Выполнено <small>1 задание</small>
+      </div>
+
+      <div class="task-list">
+
+        <div class="task done">
+          <button class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>
+          <div class="t-main">
+            <div class="t-subject">Английский язык</div>
+            <div class="t-title">Эссе «My future profession»</div>
+          </div>
+          <span class="t-due ok">Готово</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================== ПРОФИЛЬ ================== -->
+    <section class="tab" id="tab-profile">
+      <div class="profile-head">
+      <div class="profile">
+    <img src="imge/artem.jpeg" alt="Артём Соколов" class="profile-photo">
+
+    <div>
+        <h2>Артём Соколов</h2>
+        <p>Группа ПКС-3 · 2 курс</p>
+        <p>Информационные системы и программирование</p>
+    </div>
+    </div>
+      </div>
+          <div class="info">
+            <div class="student-info">
+             <h3>Информация о студенте </h3>
+             <div class="info-row">
+                <span>№ студента </span>
+                <strong>ИС-21001</strong>
+             </div>
+              <div class="info-row">
+                <span>Имя: </span>
+                <strong>Артём</strong>
+             </div>
+              <div class="info-row">
+                <span>Фамиля:</span>
+                <strong>Солоков</strong>
+             </div>
+              <div class="info-row">
+                <span>Отчества:c</span>
+                <strong>Александрович</strong>
+             </div>
+          </div>
+      
+      <div class="sem-bar2" >
+        <div class="sem-cell clickable">
+          <div class="sem-val">4.6</div>
+          <div class="sem-lbl">Средний</div>
+        </div>
+        <div class="sem-cell clickable">
+          <div class="sem-val">94%</div>
+          <div class="sem-lbl">Посещ.</div>
+        </div>
+        <div class="sem-cell clickable">
+          <div class="sem-val">12</div>
+          <div class="sem-lbl">Заданий</div>
+        </div>
+      </div>
+          </div>
+
+      <div class="section-label">Настройки</div>
+      <div class="menu">
+        <button class="menu-item" data-menu="notify">
+          <span class="m-ico">◉</span>Уведомления<span class="m-arrow">›</span>
+        </button>
+        <button class="menu-item" data-menu="group">
+          <span class="m-ico">◈</span>Моя группа<span class="m-arrow">›</span>
+        </button>
+        <button class="menu-item" data-menu="year">
+          <span class="m-ico">▤</span>Успеваемость за год<span class="m-arrow">›</span>
+        </button>
+        </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================== НИЖНЯЯ НАВИГАЦИЯ ================== -->
+  <nav class="nav">
+    <button class="nav-item active" data-tab="schedule" data-title="Расписание">
+      <span class="n-icon-wrap"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg></span>
+      Расписание
+    </button>
+
+    <button class="nav-item" data-tab="grades" data-title="Оценки">
+      <span class="n-icon-wrap"><svg viewBox="0 0 24 24"><path d="M4 19V5a1 1 0 0 1 1-1h11l4 4v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z"/><path d="M8 13h8M8 16.5h5"/></svg></span>
+      Оценки
+    </button>
+
+    <button class="nav-item" data-tab="homework" data-title="Домашние задания">
+      <span class="n-icon-wrap"><svg viewBox="0 0 24 24"><path d="M9 4.5h6a1 1 0 0 1 1 1V6h1.5a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1H8V5.5a1 1 0 0 1 1-1Z"/><path d="M9.5 12.5l2 2 3.5-3.5"/></svg></span>
+      ДЗ
+      <span class="nav-badge">3</span>
+    </button>
+
+    <button class="nav-item" data-tab="profile" data-title="Профиль">
+      <span class="n-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.7 4-5.5 7.5-5.5s6.3 1.8 7.5 5.5"/></svg></span>
+      Профиль
+    </button>
+  </nav>
+
+    <div class="overlay" id="overlay" data-close onclick="document.querySelectorAll('.sheet').forEach(function(s){s.classList.remove('show')});this.classList.remove('show');document.body.style.overflow='';"></div>
+  <div class="sheet" id="sheet-lesson" role="dialog" aria-modal="true" aria-label="Детали пары">
+    <div class="sheet-head"><div><div class="sheet-title" id="lessonDetailTitle">Детали пары</div><div class="sheet-sub">Нажмите «Напомнить», чтобы не забыть</div></div><button class="sheet-close" type="button" aria-label="Закрыть" data-close onclick="this.closest('.sheet').classList.remove('show');var o=document.getElementById('overlay');if(o)o.classList.remove('show');document.body.style.overflow='';">×</button></div>
+    <div class="sheet-body" id="lessonDetailBody"></div>
+  </div>
+  <div class="sheet" id="sheet-notify" role="dialog" aria-modal="true" aria-label="Уведомления">
+    <div class="sheet-head"><div><div class="sheet-title">Уведомления</div><div class="sheet-sub">Управляй пушами и почтой</div></div><button class="sheet-close" type="button" aria-label="Закрыть" data-close onclick="this.closest('.sheet').classList.remove('show');var o=document.getElementById('overlay');if(o)o.classList.remove('show');document.body.style.overflow='';">×</button></div>
+    <div class="sheet-body">
+      <div class="row"><div class="row-l"><div class="row-title">Push-уведомления</div><div class="row-sub">Пары, оценки и дедлайны</div></div><button class="toggle on" data-store="notify_push"></button></div>
+      <div class="row"><div class="row-l"><div class="row-title">Оценки</div><div class="row-sub">Сразу как ставит преподаватель</div></div><button class="toggle on" data-store="notify_grades"></button></div>
+      <div class="row"><div class="row-l"><div class="row-title">Домашние задания</div><div class="row-sub">За день до срока</div></div><button class="toggle on" data-store="notify_hw"></button></div>
+      <div class="row"><div class="row-l"><div class="row-title">Расписание</div><div class="row-sub">Изменения и отмены пар</div></div><button class="toggle" data-store="notify_schedule"></button></div>
+      <div class="row"><div class="row-l"><div class="row-title">Звук</div><div class="row-sub">Короткий сигнал при новых событиях</div></div><button class="toggle" data-store="notify_sound"></button></div>
+    </div>
+  </div>
+  <div class="sheet" id="sheet-group" role="dialog" aria-modal="true" aria-label="Моя группа">
+    <div class="sheet-head"><div><div class="sheet-title">ПКС-3 - 3 курс</div><div class="sheet-sub">Информационные системы и программирование · 24 чел.</div></div><button class="sheet-close" type="button" aria-label="Закрыть" data-close onclick="this.closest('.sheet').classList.remove('show');var o=document.getElementById('overlay');if(o)o.classList.remove('show');document.body.style.overflow='';">×</button></div>
+    <div class="sheet-body">
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;"><span class="chip">Куратор: Иванова М.С.</span><span class="chip">Староста: Соколов А.</span></div>
+      <div class="person"><div class="p-ava-sm">АС</div><div class="row-l"><div class="row-title">Артём Соколов <span style="color:var(--accent); font-size:11px; background:var(--accent-soft); padding:2px 6px; border-radius:6px; margin-left:6px;">ты</span></div><div class="row-sub">ср. балл 4.6 · 94% посещаемость</div></div><span style="color:var(--ok); font-weight:700;">?</span></div>
+      <div class="person"><div class="p-ava-sm">ЕК</div><div class="row-l"><div class="row-title">Елена Кузнецова</div><div class="row-sub">ср. балл 4.9 · староста</div></div><span style="color:var(--ok);">?</span></div>
+      <div class="person"><div class="p-ava-sm">ДМ</div><div class="row-l"><div class="row-title">Даниил Морозов</div><div class="row-sub">ср. балл 4.3</div></div><span style="color:var(--muted-2);">0</span></div>
+      <div class="person"><div class="p-ava-sm">АК</div><div class="row-l"><div class="row-title">Анна Ковалёва</div><div class="row-sub">ср. балл 4.7</div></div><span style="color:var(--ok);">?</span></div>
+      <div class="person"><div class="p-ava-sm">ИП</div><div class="row-l"><div class="row-title">Илья Петров</div><div class="row-sub">ср. балл 3.9</div></div><span style="color:var(--warn);">?</span></div>
+      <div style="margin-top:14px; display:flex; gap:8px;"><button class="chip" onclick="showToast(`Чат группы скоро`)">Чат группы</button><button class="chip" onclick="showToast(`Расписание группы скопировано`)">Поделиться</button></div>
+    </div>
+  </div>
+  <div class="sheet" id="sheet-year" role="dialog" aria-modal="true" aria-label="Успеваемость">
+    <div class="sheet-head"><div><div class="sheet-title">Успеваемость за год</div><div class="sheet-sub">Динамика по месяцам · 1 семестр</div></div><button class="sheet-close" type="button" aria-label="Закрыть" data-close onclick="this.closest('.sheet').classList.remove('show');var o=document.getElementById('overlay');if(o)o.classList.remove('show');document.body.style.overflow='';">×</button></div>
+    <div class="sheet-body">
+      <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:16px;"><div style="font-size:28px; font-weight:800; letter-spacing:-.8px;">4.6</div><div style="font-size:12.5px; color:var(--ok); background:var(--ok-bg); padding:3px 8px; border-radius:8px; font-weight:700;">+0.3</div><div style="margin-left:auto; font-size:12px; color:var(--muted); font-weight:600;">сентябрь — январь</div></div>
+      <div style="display:grid; gap:10px;">
+        <div class="row" style="padding:8px 0;"><div class="row-l"><div class="row-title" style="font-size:12px;">Сентябрь</div></div><div class="grade-bar"><i data-w="72%"></i></div><b>4.4</b></div>
+        <div class="row" style="padding:8px 0;"><div class="row-l"><div class="row-title" style="font-size:12px;">Октябрь</div></div><div class="grade-bar"><i data-w="78%"></i></div><b>4.6</b></div>
+        <div class="row" style="padding:8px 0;"><div class="row-l"><div class="row-title" style="font-size:12px;">Ноябрь</div></div><div class="grade-bar"><i data-w="84%"></i></div><b>4.7</b></div>
+        <div class="row" style="padding:8px 0;"><div class="row-l"><div class="row-title" style="font-size:12px;">Декабрь</div></div><div class="grade-bar"><i data-w="68%" style="background:var(--warn);"></i></div><b>4.2</b></div>
+        <div class="row" style="padding:8px 0;"><div class="row-l"><div class="row-title" style="font-size:12px;">Январь</div></div><div class="grade-bar"><i data-w="90%"></i></div><b>4.8</b></div>
+      </div>
+      <div style="margin-top:16px; padding:12px 14px; background:var(--surface-2); border:1px solid var(--line); border-radius:10px; font-size:12.5px; color:var(--muted); line-height:1.5;"><b style="color:var(--text);">Совет:</b> подтяни «Английский» — средний 4.0 тянет балл вниз.</div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+
+
+</body>
+</html>
