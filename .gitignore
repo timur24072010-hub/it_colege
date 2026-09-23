@@ -1,2 +1,0 @@
-backend/.env
-echo "backend/.env" >> .gitignore
